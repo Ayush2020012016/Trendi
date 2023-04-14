@@ -1,11 +1,12 @@
 import React from 'react'
-import { generateProducts } from '../../utils/fakerData'
 
-console.log(generateProducts())
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
+    <div className="home-page">
+    <div class="homeMasterContainer">
+      <SearchBar onclick={handleClick} onSearchBarClick={handleClick} />
+    </div>
+  </div>  )
 }
 
 export default HomePage
