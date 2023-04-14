@@ -10,14 +10,18 @@ const SearchBar = ({ onSearch, onSearchBarClick }) => {
  
 
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        value={query}
-        onChange={handleQueryChange}
-        placeholder=""
-      />
-    </div>
+    <>
+        <div className="search-bar">
+          <input
+            type="text"
+            value={query}
+            onChange={handleQueryChange}
+            placeholder=""
+          />
+        <span class="material-symbols-outlined">search</span>
+        </div>
+    </>
+
   );
 };
 
