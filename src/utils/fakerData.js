@@ -1,7 +1,7 @@
 import {faker} from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';
 
-export const generateProducts = (quantity) => {
+ const generateProducts = (quantity) => {
   const products = [];
   for (let i = 0; i < quantity; i++) {
     const product = {
@@ -15,3 +15,5 @@ export const generateProducts = (quantity) => {
   }
   return products;
 };
+
+export default generateProducts;
