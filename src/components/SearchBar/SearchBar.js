@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./SearchBar.scss";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch, onSearchBarClick }) => {
+  const [query, setQuery] = useState("");
+
+  const handleQueryChange = (event) => {
+    setQuery(event.target.value);
+  };
+ 
+
   return (
-    <div>SearchBar</div>
-  )
-}
+    <div className="search-bar">
+      <input
+        type="text"
+        value={query}
+        onChange={handleQueryChange}
+        placeholder=""
+      />
+    </div>
+  );
+};
 
-export default SearchBar
+export default SearchBar;
